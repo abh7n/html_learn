@@ -1,0 +1,64 @@
+<script>
+  function validate() {
+    var username = document.getElementById("username");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var confirmpassword = document.getElementById("confirmpassword");
+
+    if (username.value == "") {
+      alert('Username is empty');
+      username.focus();
+      return false;
+    }
+
+    if (email.value == "") {
+      alert('Email is empty');
+      email.focus();
+      return false;
+    }
+
+    if (password.value == "") {
+      alert('Password is empty');
+      password.focus();
+      return false;
+    }
+
+    if (confirmpassword.value == "" || confirmpassword.value != password.value) {
+      alert('Confirm password is empty or does not match password');
+      confirmpassword.focus();
+      return false;
+    }
+
+    return true;
+  }
+</script>
+
+</script>
+
+<html>
+
+<head>
+  <title>Javascript validation</title>
+</head>
+
+<body>
+  <h1>Form Validation</h1>
+  <form action="" name="form" method="post" onsubmit="return validate()">
+    <label for="">username</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="">email</label>
+    <input type="email" name="email" id="email">
+    <br>
+    <label for="">password</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <label for="">confirmpassword</label>
+    <input type="password" name="confirmpassword" id="confirmpassword">
+    <br>
+    <input type="submit" value="confirm">
+
+  </form>
+</body>
+
+</html>

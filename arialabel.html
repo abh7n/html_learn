@@ -1,0 +1,25 @@
+<script>
+    function opendialog()
+    {
+        document.getElementById("dialog").style.display = "block";
+    }
+    function closedialog()
+    {
+        document.getElementById("dialog").style.display = "none";
+    }
+</script>
+
+<html>
+    <head>
+        <title>aria-label</title>
+    </head>
+    <body>
+
+        <div id="dialog" style="display:none;">
+        <button aria-label="close dialog" onclick="return closedialog()">x</button>
+        <p>Hello , How are you?</p>
+        </div>
+        <button onclick="opendialog()">Open Dialog</button>
+
+       </body>
+</html>
